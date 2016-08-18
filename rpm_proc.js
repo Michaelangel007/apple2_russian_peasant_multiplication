@@ -156,17 +156,20 @@ function Shr1( array )
     var i;
     var n     = array.length;
     var carry = 0;
-    var q     = 0;
-    var div   = 0;
-    var rem   = 0;
+    var sum   = 0;
 
     for( i = n-1; i >= 0; --i )
     {
-        div      = array[ i ] + carry; // dividend
-        q        = (div / 2) | 0; // 2 is divisor
-        array[i] = q;
-        rem      = div - q*2; // 2 is divisor
-        carry    = rem * BASE;
+// Optimized
+        sum      = array[i] + carry;
+        array[i] = (sum / 2) | 0;
+        carry    = (sum & 1) ? BASE : 0;
+// Original
+//        div      = array[ i ] + carry; // dividend
+//        q        = (div / 2) | 0; // 2 is divisor
+//        array[i] = q;
+//        rem      = div - q*2; // 2 is divisor
+//        carry    = rem * BASE;
     }
 }
 
