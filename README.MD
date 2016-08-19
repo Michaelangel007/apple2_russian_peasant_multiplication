@@ -32,7 +32,7 @@ An alternative algorithm to implement multiplication using only:
 * bit-shift (left and right), and
 * addition.
 
-Example of "normal" multiplication:
+Example of "traditional" multiplication:
 
 In base 10:
 
@@ -67,23 +67,23 @@ Example of Russian Peasant multiplication:
 In Base 10:
 
 ```
-               A         B   Sum     =    0
-              86        57     0 + A =   86 (b is odd)
-      x 2 =  172  / 2 = 28    86     =   86
-      x 2 =  344  / 2 = 14    86     =   86
-      x 2 =  688  / 2 =  7    86 + A =  774 (b is odd)
-      x 2 = 1376  / 2 =  3   774 + A = 2150 (b is odd)
-      x 2 = 2752  / 2 =  1  2150 + A = 4902 (b is odd)
+               A          B   Sum =    0
+              86         57   + A =   86 (b is odd)
+      x 2 =  172   / 2 = 28       =   86
+      x 2 =  344   / 2 = 14       =   86
+      x 2 =  688   / 2 =  7   + A =  774 (b is odd)
+      x 2 = 1376   / 2 =  3   + A = 2150 (b is odd)
+      x 2 = 2752   / 2 =  1   + A = 4902 (b is odd)
 ```
 
 In Base 2:
 
 ```
-               A         B  Sum = 0
-        01010110  00111001  + A = 00000001010110 (b is odd)
-       010101100  00011100      = 00000001010110
-      0101011000  00001110      = 00000001010110
-     01010110000  00000111  + A = 00001100000110 (b is odd)
-    010101100000  00000011  + A = 00100001100110 (b is odd)
-   0101011000000  00000001  + A = 01001100100110 (b is odd)
+               A          B   Sum = 0
+        01010110   00111001   + A = 00000001010110 (b is odd)
+       010101100   00011100       = 00000001010110
+      0101011000   00001110       = 00000001010110
+     01010110000   00000111   + A = 00001100000110 (b is odd)
+    010101100000   00000011   + A = 00100001100110 (b is odd)
+   0101011000000   00000001   + A = 01001100100110 (b is odd)
 ```
