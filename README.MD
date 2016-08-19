@@ -27,7 +27,7 @@ And enter in `123456789` * `987654321` respectively for A and B ...
 
 # So what the heck is it?
 
-An alternative algorith to implement multiplication using only:
+An alternative algorithm to implement multiplication using only:
 
 * bit-shift (left and right), and
 * addition.
