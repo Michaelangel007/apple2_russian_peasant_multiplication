@@ -150,6 +150,20 @@ In Base 16:
        x 2 = AC0   / 2 =  1   Yes      + A = 1326
 ```
 
+# Bases
+
+Does this algorithm work in other bases such as 2, 8, or 16?
+
+Consider the question:
+
+Q. Does multipling by 2 work in other bases?
+A. Yes.
+
+Q. Why?
+A. When we write a number in a different base we have the _same representation_ but a _different presentation._
+
+Adding, Multiplying, Dividing all _function_ the same regardless of which base we use.
+
 # Efficiency
 
 For a "BigInt" or "BigNumber" library this _is NOT_ the most efficient (\*) way to
