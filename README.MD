@@ -67,13 +67,13 @@ Example of Russian Peasant multiplication:
 In Base 10:
 
 ```
-               A          B   Sum =    0
-              86         57   + A =   86 (b is odd)
-      x 2 =  172   / 2 = 28       =   86
-      x 2 =  344   / 2 = 14       =   86
-      x 2 =  688   / 2 =  7   + A =  774 (b is odd)
-      x 2 = 1376   / 2 =  3   + A = 2150 (b is odd)
-      x 2 = 2752   / 2 =  1   + A = 4902 (b is odd)
+               A          B   B Odd?   Sum =    0
+              86         57   Yes      + A =   86
+      x 2 =  172   / 2 = 28   No           =   86
+      x 2 =  344   / 2 = 14   No           =   86
+      x 2 =  688   / 2 =  7   Yes      + A =  774
+      x 2 = 1376   / 2 =  3   Yes      + A = 2150
+      x 2 = 2752   / 2 =  1   Yes      + A = 4902
 ```
 
 In Base 2:
@@ -87,3 +87,29 @@ In Base 2:
     010101100000   00000011   + A = 00100001100110 (b is odd)
    0101011000000   00000001   + A = 01001100100110 (b is odd)
 ```
+
+In Base 8:
+
+```
+                A          B   B Odd?   Sum =     0
+              126         71   Yes      + A =   126
+       x 2 =  254   / 2 = 34   No           =   126
+       x 2 =  530   / 2 = 16   No           =   126
+       x 2 = 1260   / 2 =  7   Yes      + A =  1406
+       x 2 = 2540   / 2 =  3   Yes      + A =  4146
+       x 2 = 5300   / 2 =  1   Yes      + A = 11446
+```
+
+In Base 16:
+
+```
+               A          B   B Odd?   Sum =    0
+              56         39   Yes      + A =   56
+       x 2 =  AC   / 2 = 1C   No           =   56
+       x 2 = 158   / 2 =  E   No           =   56
+       x 2 = 2B0   / 2 =  7   Yes      + A =  306
+       x 2 = 560   / 2 =  3   Yes      + A =  866
+       x 2 = AC0   / 2 =  1   Yes      + A = 1326
+```
+
+
