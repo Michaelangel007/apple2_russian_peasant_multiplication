@@ -112,4 +112,22 @@ In Base 16:
        x 2 = AC0   / 2 =  1   Yes      + A = 1326
 ```
 
+Algorithm:
+
+1. Initialize Sum <- zero
+2. If B is odd then add A to Sum.  In C nomenclature:   `Sum += A;`
+3. Multiply A by 2 -- that is, Shift A **left** by one.  In C nomenclature: `A <<= 1;`
+4. Divide B by 2 -- that is, Shift B **right** by one. In C nomenclature:   ` B >>= 1;`
+5. If B is zero then STOP
+6. Goto step 2
+
+For a "BigInt" or "BigNumber" library this _isn't_ the most efficient way to
+ multiply numbers but it is rather trivial to implement. You only need a few
+ functions:
+
+* `isEven()`
+* `isZero()`
+* `Shl()`
+* `Shr()`
+* `AddTo()`
 
