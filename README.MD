@@ -34,12 +34,12 @@ An alternative algorithm to implement multiplication using only:
 
 # Algorithm
 
-1. Initialize Sum <- zero. In C nomenclature: `Sum = 0;`
-2. If B is odd then add A to Sum.  In C nomenclature:   `if( B & 1 ) Sum += A;`
-3. Multiply A by 2 -- that is, Shift A **left** by one.  In C nomenclature: `A <<= 1;`
-4. Divide B by 2 -- that is, Shift B **right** by one. In C nomenclature:   ` B >>= 1;`
-5. If B is zero then STOP.  `while( b ) { ... }`
-6. Goto step 2
+1. Initialize sum <- ZERO.
+2. IF b is ZERO then STOP.
+3. IF b is ODD then ADD a to sum.
+4. MULTIPLY a by 2. That is, shift a **left** once.
+5. DIVIDE b by 2. That is, shift b **right** once.
+6. GOTO step 2
 
 Paste the following program into an [online C compiler](https://www.onlinegdb.com/online_c_compiler)
 
