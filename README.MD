@@ -178,7 +178,7 @@ For a "BigInt" or "BigNumber" library this _is NOT_ the most efficient (\*) way 
 
 Notes:
 
-(\*) Almost everyone uses FFT (Fast Fourier Transforms), Toom, and/or Karatsuba for multiplication. For example [GMP](https://gmplib.org/manual/), GNU Multiple Precision arithmetic library, uses **[seven](https://gmplib.org/manual/Multiplication-Algorithms.html#Multiplication-Algorithms)** different multiplication algorithms!:
+(\*) Almost everyone uses FFT (Fast Fourier Transforms), Toom, and/or Karatsuba for multiplication. For example [GMP](https://gmplib.org/manual/), GNU Multiple Precision arithmetic library, uses **[seven](https://gmplib.org/manual/Multiplication-Algorithms.html#Multiplication-Algorithms)** different multiplication algorithms!
 
 * Basecase
 * Karatsuba
