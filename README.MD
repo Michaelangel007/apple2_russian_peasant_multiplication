@@ -29,7 +29,7 @@ And enter in `123456789` * `987654321` respectively for A and B ...
 
 An alternative algorithm to implement multiplication using only:
 
-* bit-shift (left and right), and
+* bit-shifts (left and right), and
 * addition.
 
 Example of "traditional" multiplication:
