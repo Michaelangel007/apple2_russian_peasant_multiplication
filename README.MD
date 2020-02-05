@@ -35,7 +35,7 @@ An alternative algorithm to implement multiplication using only:
 # Algorithm
 
 1. Initialize Sum <- zero. In C nomenclature: `Sum = 0;`
-2. If B is odd then add A to Sum.  In C nomenclature:   `Sum += A;`
+2. If B is odd then add A to Sum.  In C nomenclature:   `if( B & 1 ) Sum += A;`
 3. Multiply A by 2 -- that is, Shift A **left** by one.  In C nomenclature: `A <<= 1;`
 4. Divide B by 2 -- that is, Shift B **right** by one. In C nomenclature:   ` B >>= 1;`
 5. If B is zero then STOP.  `while( b ) { ... }`
