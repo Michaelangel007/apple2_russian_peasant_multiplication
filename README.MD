@@ -1,6 +1,6 @@
 # Russian Peasant Multiplication
 
-From Assembly to Basic to Javascript!
+From Assembly to Basic to C to Javascript!
 
 Here are my implementations of Russian Peasant Multiplication implemented in various languages:
 
@@ -34,12 +34,39 @@ An alternative algorithm to implement multiplication using only:
 
 # Algorithm
 
-1. Initialize Sum <- zero
+1. Initialize Sum <- zero. In C nomenclature: `Sum = 0;`
 2. If B is odd then add A to Sum.  In C nomenclature:   `Sum += A;`
 3. Multiply A by 2 -- that is, Shift A **left** by one.  In C nomenclature: `A <<= 1;`
 4. Divide B by 2 -- that is, Shift B **right** by one. In C nomenclature:   ` B >>= 1;`
-5. If B is zero then STOP
+5. If B is zero then STOP.  `while( b ) { ... }`
 6. Goto step 2
+
+Paste the following program into an [online C compiler](https://www.onlinegdb.com/online_c_compiler)
+
+```c
+#include <stdio.h>
+
+int RPM( int a, int b )
+{
+    int sum = 0;
+
+    while( b )
+    {
+        if( b & 1 )
+            sum += a;
+
+        a <<= 1;
+        b >>= 1;
+    }
+
+    return sum;
+}
+
+int main()
+{
+    return printf( "%d\n", RPM( 86, 57 ) );
+}
+```
 
 # Examples
 
