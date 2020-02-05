@@ -157,12 +157,30 @@ Does this algorithm work in other bases such as 2, 8, or 16?
 Consider the question:
 
 Q. Does multipling by 2 work in other bases?
+
 A. Yes.
 
 Q. Why?
-A. When we write a number in a different base we have the _same representation_ but a _different presentation._
 
-Adding, Multiplying, Dividing all _function_ the same regardless of which base we use.
+A. When we write a number in a different base we have the _same_ **representation** but a _different_ **presentation.**
+
+Adding, subtracting, multiplying, dividing all _function_ the same _regardless_ of which base we use.
+
+This is the _exact_ same reason that 0.999999... = 1.0. The exact same _represented_ number is _presented_ differently -- which
+ confuses the uninformed.  It is a "Mathematical illusion."
+
+Proof:
+
+```
+       1 = 1                Tautology
+     1/3 = 1/3              Divide by sides by 3
+ 3 * 1/3 = 3 * 1/3          Multiply by sides by 3
+ 3 * 1/3 = 3 * 0.333333...  Express integer fraction in decimal
+     1   = 3 * 0.333333...  Simply left side (fractions cancel)
+     1   =     0.999999...  Simply right side
+```
+
+QED.
 
 # Efficiency
 
@@ -194,4 +212,6 @@ Notes:
 
 * https://tspiteri.gitlab.io/gmp-mpfr-sys/gmp/Algorithms.html#Multiplication-Algorithms
 * https://en.wikipedia.org/wiki/Multiplication_algorithm
-
+* Multiplication is associative
+* Multiplication is commutative
+* https://en.wikipedia.org/wiki/Order_of_operations
