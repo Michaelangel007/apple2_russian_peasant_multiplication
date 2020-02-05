@@ -32,6 +32,17 @@ An alternative algorithm to implement multiplication using only:
 * bit-shifts (left and right), and
 * addition.
 
+# Algorithm
+
+1. Initialize Sum <- zero
+2. If B is odd then add A to Sum.  In C nomenclature:   `Sum += A;`
+3. Multiply A by 2 -- that is, Shift A **left** by one.  In C nomenclature: `A <<= 1;`
+4. Divide B by 2 -- that is, Shift B **right** by one. In C nomenclature:   ` B >>= 1;`
+5. If B is zero then STOP
+6. Goto step 2
+
+# Examples
+
 Example of "traditional" multiplication:
 
 In base 10:
@@ -112,17 +123,10 @@ In Base 16:
        x 2 = AC0   / 2 =  1   Yes      + A = 1326
 ```
 
-Algorithm:
+# Efficiency
 
-1. Initialize Sum <- zero
-2. If B is odd then add A to Sum.  In C nomenclature:   `Sum += A;`
-3. Multiply A by 2 -- that is, Shift A **left** by one.  In C nomenclature: `A <<= 1;`
-4. Divide B by 2 -- that is, Shift B **right** by one. In C nomenclature:   ` B >>= 1;`
-5. If B is zero then STOP
-6. Goto step 2
-
-For a "BigInt" or "BigNumber" library this _isn't_ the most efficient way to
- multiply numbers but it is rather trivial to implement. You only need a few
+For a "BigInt" or "BigNumber" library this _is NOT_ the most efficient (\*) way to
+ multiply numbers as it doesn't scale (\*\*).  However, it is rather trivial to implement. You only need a few
  functions:
 
 * `isEven()`
@@ -130,4 +134,23 @@ For a "BigInt" or "BigNumber" library this _isn't_ the most efficient way to
 * `Shl()`
 * `Shr()`
 * `AddTo()`
+
+Notes:
+
+(\*) Almost everyone uses FFT (Fast Fourier Transforms), Toom, and/or Karatsuba for multiplication. For example [GMP](https://gmplib.org/manual/), GNU Multiple Precision arithmetic library, uses **[seven](https://gmplib.org/manual/Multiplication-Algorithms.html#Multiplication-Algorithms)** different multiplication algorithms!:
+
+* Basecase
+* Karatsuba
+* Toom-3
+* Toom-4
+* Toom-6.5
+* Toom-8.5
+* FFT
+
+(\*\*) What do we mean by "Doesn't scale"?  As the input numbers uses more bits we end up doing more work other other algorithms.
+
+# References
+
+* https://tspiteri.gitlab.io/gmp-mpfr-sys/gmp/Algorithms.html#Multiplication-Algorithms
+* https://en.wikipedia.org/wiki/Multiplication_algorithm
 
