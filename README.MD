@@ -1,10 +1,10 @@
 # Russian Peasant Multiplication
 
-From Assembly to Basic to Javascript.
+From Assembly to Basic to Javascript!
 
-Here are muy implementations of Russian Peasant Multiplication implemented in various languages:
+Here are my implementations of Russian Peasant Multiplication implemented in various languages:
 
-* 6502 Assembly Language (Both ca65 and merlin32 sources)
+* 6502 Assembly Language (Both [ca65](rpm_ca65.s) and [merlin32](rpm_m32.s) sources)
 * Applesoft BASIC
 * JavaScript (Procedural version)
 * JavaScript (OOP version)
